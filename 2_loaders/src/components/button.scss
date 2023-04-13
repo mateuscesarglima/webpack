@@ -1,0 +1,13 @@
+$bg-color: #333;
+$color: #fff;
+$upper: uppercase;
+$border: 1px solid black;
+$borderR: 5px;
+
+.btn {
+  background-color: $bg-color;
+  color: $color;
+  text-transform: $upper;
+  border: $border;
+  border-radius: $borderR;
+}

@@ -22,7 +22,7 @@ module.exports = {
       {
         //expressoes regulares para identificar qual o tipo do arquivo de imagem.
         test: /\.scss$/,
-        use: ["file-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
