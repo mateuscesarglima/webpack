@@ -1,6 +1,8 @@
 import Title from "./components/title";
 import Image from "./components/image";
 import Button from "./components/button";
+import warning from "./templates/warning.html";
+import styles from "./styles/warning.css";
 
 const title = new Title();
 title.create("Primeira página");
@@ -22,3 +24,6 @@ const obj = {
 let { a, b, ...teste } = obj;
 
 console.log(a, b, teste);
+
+const body = document.querySelector("body");
+body.innerHTML += warning;

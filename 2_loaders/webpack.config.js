@@ -41,6 +41,11 @@ module.exports = {
           },
         },
       },
+      {
+        //expressão regulares para identificar o final do arquivo html.
+        test: /\.html$/,
+        use: "html-loader",
+      },
     ],
   },
 };
