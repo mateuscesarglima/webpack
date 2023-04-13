@@ -1,5 +1,6 @@
 const { resolve } = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -7,6 +8,10 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: resolve(__dirname, "dist"),
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin({
