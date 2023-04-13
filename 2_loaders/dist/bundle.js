@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_title__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/title */ \"./src/components/title.js\");\n/* harmony import */ var _components_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/image */ \"./src/components/image.js\");\n/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/button */ \"./src/components/button.js\");\n/* harmony import */ var _templates_warning_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./templates/warning.html */ \"./src/templates/warning.html\");\n/* harmony import */ var _styles_warning_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/warning.css */ \"./src/styles/warning.css\");\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n\n\n\n\nvar title = new _components_title__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\ntitle.create(\"Primeira página\");\nvar image = new _components_image__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nimage.insertImage();\nvar button = new _components_button__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nbutton.create();\n\n//babel spread\nvar obj = {\n  a: 1,\n  b: 2,\n  c: 3,\n  d: 4\n};\nvar a = obj.a,\n  b = obj.b,\n  teste = _objectWithoutProperties(obj, [\"a\", \"b\"]);\nconsole.log(a, b, teste);\nvar body = document.querySelector(\"body\");\nbody.innerHTML += _templates_warning_html__WEBPACK_IMPORTED_MODULE_3__[\"default\"];\n\n//# sourceURL=webpack://2_loaders/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_title__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/title */ \"./src/components/title.js\");\n/* harmony import */ var _components_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/image */ \"./src/components/image.js\");\n/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/button */ \"./src/components/button.js\");\n/* harmony import */ var _templates_warning_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./templates/warning.html */ \"./src/templates/warning.html\");\n/* harmony import */ var _styles_warning_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/warning.css */ \"./src/styles/warning.css\");\n/* harmony import */ var _files_frase_txt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./files/frase.txt */ \"./src/files/frase.txt\");\n/* harmony import */ var _files_descricao_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./files/descricao.json */ \"./src/files/descricao.json\");\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n\n\n\n\n\n\nvar title = new _components_title__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\ntitle.create(\"Primeira página\");\nvar image = new _components_image__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nimage.insertImage();\nvar button = new _components_button__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nbutton.create();\n\n//babel spread\nvar obj = {\n  a: 1,\n  b: 2,\n  c: 3,\n  d: 4\n};\nvar a = obj.a,\n  b = obj.b,\n  teste = _objectWithoutProperties(obj, [\"a\", \"b\"]);\nconsole.log(a, b, teste);\nvar body = document.querySelector(\"body\");\nbody.innerHTML += _templates_warning_html__WEBPACK_IMPORTED_MODULE_3__[\"default\"];\n\n// txt loader\nvar frase = _files_frase_txt__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\nconsole.log(frase);\n\n// json\nvar pessoa = _files_descricao_json__WEBPACK_IMPORTED_MODULE_6__;\nconsole.log(pessoa);\npessoa.habilidades.forEach(function (habilidade) {\n  return console.log(habilidade);\n});\n\n//# sourceURL=webpack://2_loaders/./src/index.js?");
 
 /***/ }),
 
@@ -117,6 +117,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<div>\\n  <p class=\\\"warning\\\">Voce nao pode acessar esta pagina</p>\\n</div>\\n\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://2_loaders/./src/templates/warning.html?");
+
+/***/ }),
+
+/***/ "./src/files/frase.txt":
+/*!*****************************!*\
+  !*** ./src/files/frase.txt ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"O webpack é muito massa!\");\n\n//# sourceURL=webpack://2_loaders/./src/files/frase.txt?");
 
 /***/ }),
 
@@ -207,6 +217,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://2_loaders/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
+
+/***/ }),
+
+/***/ "./src/files/descricao.json":
+/*!**********************************!*\
+  !*** ./src/files/descricao.json ***!
+  \**********************************/
+/***/ ((module) => {
+
+eval("module.exports = JSON.parse('{\"nome\":\"Mateus\",\"profissao\":\"Programador\",\"idade\":21,\"habilidades\":[\"Javascript\",\"HTML\",\"CSS\",\"React\",\"Node\"]}');\n\n//# sourceURL=webpack://2_loaders/./src/files/descricao.json?");
 
 /***/ })
 

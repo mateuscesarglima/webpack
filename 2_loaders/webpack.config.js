@@ -46,6 +46,11 @@ module.exports = {
         test: /\.html$/,
         use: "html-loader",
       },
+      {
+        //expressão regulares para identificar o final do arquivo html.
+        test: /\.txt$/,
+        use: "raw-loader",
+      },
     ],
   },
 };

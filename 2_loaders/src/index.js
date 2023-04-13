@@ -3,6 +3,8 @@ import Image from "./components/image";
 import Button from "./components/button";
 import warning from "./templates/warning.html";
 import styles from "./styles/warning.css";
+import fraseTxt from "./files/frase.txt";
+import descricao from "./files/descricao.json";
 
 const title = new Title();
 title.create("Primeira página");
@@ -27,3 +29,12 @@ console.log(a, b, teste);
 
 const body = document.querySelector("body");
 body.innerHTML += warning;
+
+// txt loader
+const frase = fraseTxt;
+console.log(frase);
+
+// json
+const pessoa = descricao;
+console.log(pessoa);
+pessoa.habilidades.forEach((habilidade) => console.log(habilidade));
