@@ -1,22 +1,28 @@
 const { resolve } = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const DotenvPlugin = require("dotenv-webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: "[name].[contenthash].js",
     path: resolve(__dirname, "dist"),
+    clean: true,
   },
   optimization: {
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.css",
+      filename: "[name].[contenthash].css",
     }),
+    new DotenvPlugin(),
+    new HtmlWebpackPlugin(),
   ],
   module: {
     rules: [
