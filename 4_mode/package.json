@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack --config webpack.dev.config.js",
+    "dev": "webpack serve --config webpack.dev.config.js",
     "prod": "webpack --config webpack.prod.config.js"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "mini-css-extract-plugin": "^2.7.5",
     "style-loader": "^3.3.2",
     "terser-webpack-plugin": "^5.3.7",
-    "webpack": "^5.79.0"
+    "webpack": "^5.79.0",
+    "webpack-dev-server": "^4.13.2"
   }
 }

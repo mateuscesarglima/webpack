@@ -4,6 +4,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 // const DotenvPlugin = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   mode: "development",
@@ -13,7 +14,6 @@ module.exports = {
     path: resolve(__dirname, "dist"),
     clean: true,
   },
-
   plugins: [
     new TerserPlugin(),
     new MiniCssExtractPlugin({
@@ -40,5 +40,11 @@ module.exports = {
         use: "raw-loader",
       },
     ],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    port: 8000,
   },
 };
